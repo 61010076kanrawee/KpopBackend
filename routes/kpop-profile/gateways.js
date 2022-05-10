@@ -18,3 +18,13 @@ exports.getProfileById = function (req, res) {
     }
   });
 };
+
+exports.postAll = function (req, res) {
+  services.updateProfile(req, function (error, result) {
+    if (error) {
+      res.status(422).send(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+};

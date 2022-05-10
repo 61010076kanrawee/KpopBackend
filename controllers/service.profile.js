@@ -65,3 +65,8 @@ exports.getProfileById = function (profileId, result) {
       result(null, error);
     });
 };
+
+exports.updateProfile = function (req, res, next) {
+  // return res.json({"Word": "Hello World"})
+  res("test")
+}
