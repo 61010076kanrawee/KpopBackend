@@ -18,7 +18,7 @@ app.get("/", function (req, res) {
 });
 
 app.use("/kpop-profile", gateways);
- app.use("/kpop-update", gateways_kpop_update);
+app.use("/kpop-update", gateways_kpop_update);
 
 app.use("*", (req, res) => {
   res.sendStatus(404);
