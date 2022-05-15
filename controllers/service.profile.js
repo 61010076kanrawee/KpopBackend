@@ -66,7 +66,4 @@ exports.getProfileById = function (profileId, result) {
     });
 };
 
-exports.updateProfile = function (req, res, next) {
-  // return res.json({"Word": "Hello World"})
-  res("test")
-}
+

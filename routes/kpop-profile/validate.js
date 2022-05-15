@@ -19,11 +19,9 @@ exports.getProfileById = async function (req, res) {
   }
 };
 
-exports.postAll = async function (req, res) {
-  gateways.postAll(req, res);
-};
 
-exports.postUpdateById = async function (req, res) {
+
+exports.getUpdateById = async function (req, res) {
   let data = req.params;
   const schema = Joi.object({
     name: Joi.string().min(3).max(50).required(),
@@ -32,7 +30,7 @@ exports.postUpdateById = async function (req, res) {
   if (error) {
     res.status(400).send({ error: error.details[0].message });
   } else {
-    gateways.postUpdateById(req, res);
+    gateways.getUpdateById(req, res);
   }
 };
 

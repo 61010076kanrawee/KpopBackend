@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const gateways = require("./routes/kpop-profile/index");
+const gateways_kpop_update = require("./routes/kpop_update/index");
 
 const app = express();
 
@@ -17,7 +18,7 @@ app.get("/", function (req, res) {
 });
 
 app.use("/kpop-profile", gateways);
-// app.use("/kpop-update", index);
+ app.use("/kpop-update", gateways_kpop_update);
 
 app.use("*", (req, res) => {
   res.sendStatus(404);
