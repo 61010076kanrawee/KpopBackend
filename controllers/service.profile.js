@@ -65,5 +65,3 @@ exports.getProfileById = function (profileId, result) {
       result(null, error);
     });
 };
-
-
